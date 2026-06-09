@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fafaf8;
+  --foreground: #1a1a1a;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+@keyframes orb-float {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.65;
+  }
+  33% {
+    transform: translate(28px, -36px) scale(1.07);
+    opacity: 0.75;
+  }
+  66% {
+    transform: translate(-18px, 22px) scale(0.95);
+    opacity: 0.6;
+  }
+}
+
+@keyframes orb-drift {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translate(-32px, 26px) scale(1.05);
+    opacity: 0.7;
+  }
+}
+
+@keyframes orb-pulse {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translate(22px, -18px) scale(1.08);
+    opacity: 0.68;
+  }
+}
+
+@keyframes orbPulse {
+  0%, 100% { transform: scale(0.95); opacity: 0.85; }
+  50% { transform: scale(1.08); opacity: 0.70; }
+}
+
+@keyframes wl-orbit {
+  from { transform: rotate(0deg) translateX(110px); }
+  to   { transform: rotate(360deg) translateX(110px); }
+}
+
+@keyframes wl-orbit-sm {
+  from { transform: rotate(0deg) translateX(22px); }
+  to   { transform: rotate(360deg) translateX(22px); }
+}
+
+.connect-btn:hover {
+  background: #333 !important;
+}
+
+.pill-btn {
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 26px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+
+.pill-btn:hover:not(:disabled) {
+  background: #333;
+}
+
+.pill-btn:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.glass-input {
+  display: block;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  color: #1a1a1a;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.glass-input::placeholder {
+  color: #b0b0a8;
+}
+
+.glass-input:focus {
+  border-color: rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.energy-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(to right, #d8b4fe, #fbcfe8, #fed7aa);
+  outline: none;
+  cursor: pointer;
+}
+
+.energy-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #1a1a1a;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.energy-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #1a1a1a;
+  cursor: pointer;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.cards-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+@media (min-width: 640px) {
+  .cards-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .cards-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+

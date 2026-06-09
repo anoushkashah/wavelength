@@ -1,0 +1,31 @@
+{
+  "name": "wavelength",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -H 127.0.0.1",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.100.1",
+    "@types/p5": "^1.7.7",
+    "@types/three": "^0.184.1",
+    "next": "16.2.7",
+    "p5": "^2.3.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "three": "^0.184.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.7",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
